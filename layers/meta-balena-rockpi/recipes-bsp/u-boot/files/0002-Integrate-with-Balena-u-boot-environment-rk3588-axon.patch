@@ -1,0 +1,24 @@
+From 53ecc52c4086559c258c9eab58bf382128b30155 Mon Sep 17 00:00:00 2001
+From: Pratiksha0102 <pratikshathanki2501@gmail.com>
+Date: Wed, 23 Apr 2025 16:31:59 +0530
+Subject: [PATCH 2/3] Integrate with Balena u-boot environment rk3588 axon
+
+---
+ include/configs/rockchip-common.h | 1 +
+ 1 file changed, 1 insertion(+)
+
+diff --git a/include/configs/rockchip-common.h b/include/configs/rockchip-common.h
+index 002dcd60c2f2..d429d38d8e0c 100644
+--- a/include/configs/rockchip-common.h
++++ b/include/configs/rockchip-common.h
+@@ -170,6 +170,7 @@
+ 	"boot_fit;"
+ #else
+ #define RKIMG_BOOTCOMMAND			\
++	"setenv resin_kernel_load_addr ${kernel_addr_r}; run resin_set_kernel_root; run set_os_cmdline;" \
+ 	"boot_android ${devtype} ${devnum};"	\
+ 	"boot_fit;"				\
+ 	"bootrkp;"				\
+-- 
+2.40.1
+

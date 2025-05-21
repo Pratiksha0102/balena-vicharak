@@ -22,3 +22,6 @@
 	path = contracts
 	url = https://github.com/balena-io/contracts.git
 	branch = master
+[submodule "layers/meta-vicharak"]
+	path = layers/meta-vicharak
+	url = https://github.com/vicharak-in/meta-vicharak.git

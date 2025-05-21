@@ -1,4 +1,4 @@
-#  balena-rockchip repository
+#  balena-vicharak repository
 
 ## Clone/Initialize the repository
 
